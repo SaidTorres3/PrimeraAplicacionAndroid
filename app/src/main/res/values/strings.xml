@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Primera Aplicacion</string>
+    <string name="TVestatus">Estatus: Ingresa tus datos.</string>
+    <string name="ETCorreo">Correo</string>
+    <string name="ETContrasena">Contraseña</string>
+    <string name="BTIniciarSesion">Iniciar sesión</string>
 </resources>

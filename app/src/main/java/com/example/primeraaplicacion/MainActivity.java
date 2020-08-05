@@ -29,21 +29,21 @@ public class MainActivity extends AppCompatActivity {
         String Correo = et1.getText().toString();
         String Contrasena = et2.getText().toString();
 
-        //String Correo = "test@test.com";
-        //String Contrasena = "1234";
-
         String CorreoCorrecto = "test@test.com";
-        String ContrasenaCorrecta = "1234";
+        String ContrasenaCorrecta = "123456";
 
-        //Toast toast1 = Toast.makeText(getApplicationContext(),"Las credenciales son incorrectas.", Toast.LENGTH_SHORT);
-        Toast toast1 = Toast.makeText(getApplicationContext(),"C: "+Correo+" P: "+Contrasena+" Tipo: "+Contrasena.getClass().getName(), Toast.LENGTH_SHORT);
+        Toast toast1 = Toast.makeText(getApplicationContext(),"Las credenciales son correctas.", Toast.LENGTH_SHORT);
+        Toast toast2 = Toast.makeText(getApplicationContext(),"Las credenciales son incorrectas.", Toast.LENGTH_SHORT);
+
+        //Toast toast1 = Toast.makeText(getApplicationContext(),"C: "+Correo+" P: "+Contrasena+" Tipo: "+Contrasena.getClass().getName(), Toast.LENGTH_SHORT);
 
         if (Correo.compareTo(CorreoCorrecto)==0 && Contrasena.compareTo(ContrasenaCorrecta)==0) {
             tv1.setText("Estatus: Has iniciado sesión correctamente.");
+            toast1.show();
         } else {
-            tv1.setText("Estatus: No has iniciado sesión aún.");
+            tv1.setText("Estatus: Credenciales incorrectas.");
+            toast2.show();
         }
-        toast1.show();
     }
 
 }
