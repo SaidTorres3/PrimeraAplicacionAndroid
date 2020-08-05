@@ -38,13 +38,12 @@ public class MainActivity extends AppCompatActivity {
         //Toast toast1 = Toast.makeText(getApplicationContext(),"Las credenciales son incorrectas.", Toast.LENGTH_SHORT);
         Toast toast1 = Toast.makeText(getApplicationContext(),"C: "+Correo+" P: "+Contrasena+" Tipo: "+Contrasena.getClass().getName(), Toast.LENGTH_SHORT);
 
-        if (Correo == CorreoCorrecto && Contrasena == ContrasenaCorrecta){
+        if (Correo.compareTo(CorreoCorrecto)==0 && Contrasena.compareTo(ContrasenaCorrecta)==0) {
             tv1.setText("Estatus: Has iniciado sesión correctamente.");
-            toast1.show();
         } else {
             tv1.setText("Estatus: No has iniciado sesión aún.");
-            toast1.show();
         }
+        toast1.show();
     }
 
 }
